@@ -372,7 +372,7 @@ AXIS_STYLE2 = dict(gridcolor="rgba(0,0,0,0)", tickfont_color="#f43f5e")
 # ─────────────────────────────────────────────
 @st.cache_data
 def load_data():
-    df = pd.read_csv('main_data.csv', sep=';')
+    df = pd.read_csv('data/main_data.csv.gz', sep=';')
     df['Balance_After_Transaction'] = (
         df['Balance_After_Transaction'].astype(str)
         .str.replace('.', '', regex=False).astype(float) / 1e12
